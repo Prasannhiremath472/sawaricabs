@@ -17,32 +17,23 @@ export const routePages = {
     uses: "return trips, hotel pickups, airport pickups, family travel, and planned outstation journeys",
     drops: "Kolhapur city, railway station, Mahalaxmi Temple area, home, hotel, or office"
   },
-  "sangli-to-pune": {
-    origin: "Sangli",
-    destination: "Pune",
-    distance: "235 km",
-    time: "4.5-5.5 hrs",
-    path: "via Karad, Satara, and Pune highway routes",
-    uses: "business visits, student travel, airport transfers, family trips, and medical travel",
-    drops: "Pune city, Pune airport, railway station, Hinjewadi, Kharadi, Swargate, or your address"
+  "goa-to-mumbai": {
+    origin: "Goa",
+    destination: "Mumbai",
+    distance: "590 km",
+    time: "10-11 hrs",
+    path: "via Konkan coastal highway (NH66) through Ratnagiri and Raigad",
+    uses: "long-distance transfers, family travel, business trips, and planned outstation journeys",
+    drops: "Mumbai city, suburbs, airport, railway station, hotel, or preferred address"
   },
-  "kolhapur-to-pune": {
-    origin: "Kolhapur",
-    destination: "Pune",
-    distance: "235 km",
-    time: "4.5-5.5 hrs",
-    path: "via Karad, Satara, and Pune express routes",
-    uses: "airport transfers, business travel, family visits, same-day travel, and outstation trips",
-    drops: "Pune city, airport, railway station, Swargate, Hinjewadi, Kharadi, or preferred address"
-  },
-  "pune-to-kolhapur": {
-    origin: "Pune",
-    destination: "Kolhapur",
-    distance: "235 km",
-    time: "4.5-5.5 hrs",
-    path: "via Satara, Karad, and Kolhapur highway routes",
-    uses: "family travel, temple visits, business trips, return journeys, and weekend travel",
-    drops: "Kolhapur city, Mahalaxmi Temple area, railway station, hotel, office, or home"
+  "mumbai-to-goa": {
+    origin: "Mumbai",
+    destination: "Goa",
+    distance: "590 km",
+    time: "10-11 hrs",
+    path: "via Konkan coastal highway (NH66) through Raigad and Ratnagiri",
+    uses: "weekend getaways, beach holidays, family vacations, and airport transfers",
+    drops: "Goa airport, Panjim, Madgaon, Calangute, Baga, Candolim, or your hotel"
   },
   "mumbai-to-kolhapur": {
     origin: "Mumbai",
@@ -62,6 +53,78 @@ export const routePages = {
     uses: "Mumbai airport drops, business trips, city transfers, family travel, and one-way journeys",
     drops: "Mumbai city, suburbs, airport, railway station, hotel, or preferred address"
   },
+  "sangli-to-mumbai": {
+    origin: "Sangli",
+    destination: "Mumbai",
+    distance: "395 km",
+    time: "7.5-8.5 hrs",
+    path: "via Karad, Satara, Pune, and Mumbai highway routes",
+    uses: "business travel, airport transfers, family trips, and long-distance journeys",
+    drops: "Mumbai city, suburbs, airport, railway station, hotel, or preferred address"
+  },
+  "mumbai-to-sangli": {
+    origin: "Mumbai",
+    destination: "Sangli",
+    distance: "395 km",
+    time: "7.5-8.5 hrs",
+    path: "via Pune, Satara, and Karad highway routes",
+    uses: "return trips, family travel, business visits, and planned outstation journeys",
+    drops: "Sangli city, railway station, Ganpati Mandir area, home, hotel, or office"
+  },
+  "belgaum-to-kolhapur": {
+    origin: "Belgaum",
+    destination: "Kolhapur",
+    distance: "95 km",
+    time: "2-2.5 hrs",
+    path: "via NH48 through Nipani",
+    uses: "business travel, family visits, same-day trips, and quick city transfers",
+    drops: "Kolhapur city, railway station, Mahalaxmi Temple area, hotel, home, or office"
+  },
+  "kolhapur-to-belgaum": {
+    origin: "Kolhapur",
+    destination: "Belgaum",
+    distance: "95 km",
+    time: "2-2.5 hrs",
+    path: "via NH48 through Nipani",
+    uses: "business travel, family visits, same-day trips, and quick city transfers",
+    drops: "Belgaum city, railway station, hotel, home, or office"
+  },
+  "belgaum-to-goa": {
+    origin: "Belgaum",
+    destination: "Goa",
+    distance: "165 km",
+    time: "3.5-4 hrs",
+    path: "via NH748 through Anmod Ghat",
+    uses: "weekend trips, beach holidays, family vacations, and airport drops",
+    drops: "Goa airport, Panjim, Madgaon, Calangute, Baga, Candolim, or your hotel"
+  },
+  "goa-to-belgaum": {
+    origin: "Goa",
+    destination: "Belgaum",
+    distance: "165 km",
+    time: "3.5-4 hrs",
+    path: "via Anmod Ghat and NH748",
+    uses: "return trips, hotel pickups, airport pickups, and family travel",
+    drops: "Belgaum city, railway station, hotel, home, or office"
+  },
+  "tasgaon-to-pune": {
+    origin: "Tasgaon",
+    destination: "Pune",
+    distance: "245 km",
+    time: "5-5.5 hrs",
+    path: "via Karad, Satara, and Pune highway routes",
+    uses: "business travel, student travel, airport transfers, and family trips",
+    drops: "Pune city, airport, railway station, Swargate, Hinjewadi, Kharadi, or preferred address"
+  },
+  "pune-to-tasgaon": {
+    origin: "Pune",
+    destination: "Tasgaon",
+    distance: "245 km",
+    time: "5-5.5 hrs",
+    path: "via Satara, Karad, and Tasgaon highway routes",
+    uses: "return trips, family visits, business travel, and weekend journeys",
+    drops: "Tasgaon town, home, hotel, or preferred address"
+  },
   "pune-to-mumbai": {
     origin: "Pune",
     destination: "Mumbai",
@@ -71,28 +134,45 @@ export const routePages = {
     uses: "airport transfers, corporate travel, family visits, same-day travel, and city transfers",
     drops: "Mumbai airport, Dadar, Bandra, Andheri, Borivali, Navi Mumbai, Thane, or your address"
   },
-  "ichalkaranji-to-pune": {
-    origin: "Ichalkaranji",
+  "mumbai-to-pune": {
+    origin: "Mumbai",
     destination: "Pune",
-    distance: "250 km",
-    time: "5-6 hrs",
-    path: "via Kolhapur, Karad, Satara, and Pune highway routes",
-    uses: "business travel, airport drops, family trips, education travel, and planned outstation rides",
-    drops: "Pune city, airport, railway station, Hinjewadi, Kharadi, Swargate, or custom location"
+    distance: "150 km",
+    time: "3-4 hrs",
+    path: "via Mumbai Pune Expressway",
+    uses: "airport transfers, corporate travel, family visits, same-day travel, and city transfers",
+    drops: "Pune city, airport, railway station, Swargate, Hinjewadi, Kharadi, or preferred address"
   }
 };
 
 export const routeOrder = [
   "kolhapur-to-goa",
   "goa-to-kolhapur",
-  "sangli-to-pune",
-  "kolhapur-to-pune",
+  "goa-to-mumbai",
+  "mumbai-to-goa",
   "mumbai-to-kolhapur",
   "kolhapur-to-mumbai",
+  "sangli-to-mumbai",
+  "mumbai-to-sangli",
+  "belgaum-to-kolhapur",
+  "kolhapur-to-belgaum",
+  "belgaum-to-goa",
+  "goa-to-belgaum",
+  "tasgaon-to-pune",
+  "pune-to-tasgaon",
   "pune-to-mumbai",
-  "ichalkaranji-to-pune",
-  "pune-to-kolhapur"
+  "mumbai-to-pune"
 ];
+
+export const localServices = {
+  "kolhapur-airport-local": {
+    title: "Kolhapur Airport — Local Transfers",
+    city: "Kolhapur",
+    description:
+      "Airport pickup and drop, plus local point-to-point rides within Kolhapur city — temple visits, railway station transfers, and same-day local travel.",
+    uses: "airport pickup and drop, temple visits, railway station transfers, and same-day local travel within Kolhapur"
+  }
+};
 
 export const destinationImages = {
   Kolhapur: {
@@ -124,6 +204,11 @@ export const destinationImages = {
     src: "/assets/destinations/ichalkaranji.jpg",
     alt: "Ichalkaranji city landmark",
     credit: "Photo: Subodh Kulkarni, CC BY-SA 4.0, Wikimedia Commons"
+  },
+  Belgaum: {
+    src: "/assets/destinations/belgaum.jpg",
+    alt: "Kamal Basadi (Chikka Basadi) Jain temple inside Belgaum Fort, Belagavi",
+    credit: "Photo: Manjunath Doddamani Gajendragad, CC0 1.0, Wikimedia Commons"
   }
 };
 
