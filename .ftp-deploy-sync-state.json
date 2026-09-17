@@ -1,0 +1,87 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1765998428133,
+    "data": [
+        {
+            "type": "folder",
+            "name": "assets"
+        },
+        {
+            "type": "folder",
+            "name": "icons"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 7663,
+            "hash": "96a9495b2dfb4f696157999d36689d70e6545dabdbba2e426d976f95e44e0323"
+        },
+        {
+            "type": "file",
+            "name": "placeholder.svg",
+            "size": 3253,
+            "hash": "64badf7aabda0b9630b87020ffb6095cb858ccbcf66b355c2aa08b1063954d3b"
+        },
+        {
+            "type": "file",
+            "name": "robots.txt",
+            "size": 160,
+            "hash": "a3d27b3ca5ce32341fa9f96f01169b521b1657c05d1860c45d1e53a6258e9e8b"
+        },
+        {
+            "type": "file",
+            "name": "assets/index-CXHEfm0q.css",
+            "size": 67888,
+            "hash": "c905d850d573cb85198f044a45bb8c9e301dcc886b3bec80eaae9076b33a8ff9"
+        },
+        {
+            "type": "file",
+            "name": "assets/index-DKUt0EqN.js",
+            "size": 476159,
+            "hash": "85ac15d22dfc2097fb72dac8534b4c47d1bce05188c84bd3f87b597788362f27"
+        },
+        {
+            "type": "file",
+            "name": "icons/android-chrome-192x192.png",
+            "size": 15032,
+            "hash": "32ebefad3450d67ec9f70c88299fc96354a2dfffccf01c901a2132945a139c80"
+        },
+        {
+            "type": "file",
+            "name": "icons/android-chrome-512x512.png",
+            "size": 56685,
+            "hash": "4f96ed189a43172b31381e7605e8792cd79ee51584ae7457c2345baf061b8069"
+        },
+        {
+            "type": "file",
+            "name": "icons/apple-touch-icon.png",
+            "size": 13594,
+            "hash": "83fc31b74a0af85f7af114efa2d88fa2199f4768525f3142d407afbecde6a23f"
+        },
+        {
+            "type": "file",
+            "name": "icons/favicon-16x16.png",
+            "size": 428,
+            "hash": "cc2f26c2cd8d70d30bd905f530afe2c719ed19688437a5a79314092fdfdea026"
+        },
+        {
+            "type": "file",
+            "name": "icons/favicon-32x32.png",
+            "size": 1035,
+            "hash": "e1ddbae3619474dc17d0dd975993d622b1a6c4d9b1d06835642c515eb4d359de"
+        },
+        {
+            "type": "file",
+            "name": "icons/favicon.ico",
+            "size": 17118,
+            "hash": "a5fee9c1ef0733cd59e49cf3a483d87943f32a105f7c0545b701dda0b0dc3f88"
+        },
+        {
+            "type": "file",
+            "name": "icons/site.webmanifest",
+            "size": 263,
+            "hash": "7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04"
+        }
+    ]
+}
