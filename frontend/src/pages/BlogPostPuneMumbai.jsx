@@ -205,10 +205,10 @@ export default function BlogPostPuneMumbai() {
                 <Link to="/mumbai-to-kolhapur">Mumbai → Kolhapur</Link>
               </li>
               <li>
-                <Link to="/pune-to-kolhapur">Pune → Kolhapur</Link>
+                <Link to="/pune-to-tasgaon">Pune → Tasgaon</Link>
               </li>
               <li>
-                <Link to="/sangli-to-pune">Sangli → Pune</Link>
+                <Link to="/sangli-to-mumbai">Sangli → Mumbai</Link>
               </li>
             </ul>
           </div>

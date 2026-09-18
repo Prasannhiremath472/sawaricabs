@@ -33,7 +33,7 @@ const reasons = [
     body: (
       <>
         Trusted by over 10,000+ users, our drivers know intercity routes like{" "}
-        <Link to="/sangli-to-pune">Sangli to Pune</Link> or <Link to="/ichalkaranji-to-pune">Ichalkaranji to Pune</Link>{" "}
+        <Link to="/sangli-to-mumbai">Sangli to Mumbai</Link> or <Link to="/belgaum-to-kolhapur">Belgaum to Kolhapur</Link>{" "}
         perfectly. Experienced drivers mean fewer wrong turns, better road judgment, and a calmer journey for you and
         your family.
       </>
@@ -179,10 +179,10 @@ export default function BlogPost5Reasons() {
                 <Link to="/pune-to-mumbai">Pune → Mumbai</Link>
               </li>
               <li>
-                <Link to="/sangli-to-pune">Sangli → Pune</Link>
+                <Link to="/sangli-to-mumbai">Sangli → Mumbai</Link>
               </li>
               <li>
-                <Link to="/kolhapur-to-pune">Kolhapur → Pune</Link>
+                <Link to="/belgaum-to-kolhapur">Belgaum → Kolhapur</Link>
               </li>
               <li>
                 <Link to="/mumbai-to-kolhapur">Mumbai → Kolhapur</Link>

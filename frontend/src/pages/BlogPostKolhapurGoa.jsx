@@ -208,7 +208,7 @@ export default function BlogPostKolhapurGoa() {
                 <Link to="/goa-to-kolhapur">Goa → Kolhapur</Link>
               </li>
               <li>
-                <Link to="/kolhapur-to-pune">Kolhapur → Pune</Link>
+                <Link to="/kolhapur-to-belgaum">Kolhapur → Belgaum</Link>
               </li>
               <li>
                 <Link to="/kolhapur-to-mumbai">Kolhapur → Mumbai</Link>

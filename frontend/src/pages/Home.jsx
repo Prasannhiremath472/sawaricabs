@@ -1,5 +1,6 @@
+import "../styles/nav.css";
 import "../styles/home.css";
-import SiteNavbar from "../components/SiteNavbar";
+import Nav from "../components/Nav";
 import TrustBar from "../components/TrustBar";
 import BookingCard from "../components/BookingCard";
 import RoutesGrid from "../components/RoutesGrid";
@@ -23,7 +24,7 @@ function BookingSection() {
         </p>
         <dl className="booking-section__stats">
           <div>
-            <dt>9</dt>
+            <dt>16</dt>
             <dd>Routes served daily</dd>
           </div>
           <div>
@@ -44,7 +45,7 @@ function BookingSection() {
 export default function Home() {
   return (
     <>
-      <SiteNavbar />
+      <Nav />
       <TrustBar />
       <Hero />
       <BookingSection />

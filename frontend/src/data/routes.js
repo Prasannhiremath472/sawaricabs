@@ -255,9 +255,7 @@ export function cabServiceTitle(route) {
 }
 
 export function heroImages(route) {
-  const originImage = destinationImages[route.origin];
-  const destinationImage = destinationImages[route.destination];
-  const leftImage = originImage || destinationImage;
-  const rightImage = destinationImage || originImage;
+  const leftImage = destinationImages[route.origin] || null;
+  const rightImage = destinationImages[route.destination] || null;
   return { leftImage, rightImage };
 }

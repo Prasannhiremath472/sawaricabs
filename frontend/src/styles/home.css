@@ -130,6 +130,8 @@ a {
   top: calc(100% + 10px);
   left: 0;
   width: 270px;
+  max-height: 360px;
+  overflow-y: auto;
   background: #fff;
   border-radius: 16px;
   border: 1px solid var(--line);

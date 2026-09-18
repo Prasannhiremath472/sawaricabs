@@ -1,25 +1,10 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import "../styles/nav.css";
 import "../styles/route-page.css";
-import {
-  routePages,
-  cabOptions,
-  titleCase,
-  cabServiceTitle,
-  heroImages,
-} from "../data/routes";
+import { cabOptions, destinationImages, localServices } from "../data/routes";
 import { PhoneIcon, WhatsAppIcon, StarIcon, ClockIcon, UsersIcon, ShieldIcon, PinIcon } from "../components/icons";
 import Nav from "../components/Nav";
 import WhatsAppFab from "../components/WhatsAppFab";
-
-function heroPhotoCredits(route) {
-  const { leftImage, rightImage } = heroImages(route);
-  const credits = [leftImage, rightImage].filter(Boolean).map((img) => img.credit);
-  const unique = [...new Set(credits)];
-  if (!unique.length) return null;
-  return <p className="route-hero__photo-credit">{unique.join(" · ")}</p>;
-}
 
 function CabOptionCard({ option }) {
   return (
@@ -43,31 +28,29 @@ function CabOptionCard({ option }) {
   );
 }
 
-export default function RoutePage() {
-  const { slug: rawSlug } = useParams();
-  const slug = routePages[rawSlug] ? rawSlug : "kolhapur-to-goa";
-  const route = routePages[slug];
-  const title = titleCase(slug);
-  const titleLong = cabServiceTitle(route);
+export default function LocalServicePage() {
+  const service = localServices["kolhapur-airport-local"];
+  const cityImage = destinationImages[service.city];
 
   useEffect(() => {
-    document.title = `${title} | Sawari Cabs`;
+    document.title = `${service.title} | Sawari Cabs`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        `Book ${title} with Sawari Cabs. Clean AC cabs, professional drivers, one-way and round-trip options, and 24/7 support.`
+        `Book ${service.title} with Sawari Cabs. Airport pickup, drop, and local rides within ${service.city}. Clean AC cabs, 24/7 support.`
       );
     }
-  }, [title]);
+  }, [service]);
 
-  const { leftImage, rightImage } = heroImages(route);
-  const heroStyle = {
-    ...(leftImage ? { "--route-hero-origin-image": `url('${leftImage.src}')` } : {}),
-    ...(rightImage ? { "--route-hero-destination-image": `url('${rightImage.src}')` } : {}),
-  };
+  const heroStyle = cityImage
+    ? {
+        "--route-hero-origin-image": `url('${cityImage.src}')`,
+        "--route-hero-destination-image": `url('${cityImage.src}')`,
+      }
+    : {};
 
-  const waBookText = encodeURIComponent(`${route.origin} to ${route.destination}`);
+  const waBookText = encodeURIComponent(`${service.city} airport / local`);
   const waBookHref = `https://wa.me/917387338634?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
 
   return (
@@ -105,53 +88,41 @@ export default function RoutePage() {
         <div className="route-hero__inner">
           <p className="route-eyebrow">
             <PinIcon width="14" height="14" />
-            {route.origin} → {route.destination}
+            {service.city} Airport &amp; Local
           </p>
-          <h1>{titleLong}</h1>
-          <p>
-            Book a private {route.origin} to {route.destination} cab for {route.uses}. Clean AC cabs, experienced
-            drivers, 24/7 support.
-          </p>
+          <h1>{service.title}</h1>
+          <p>{service.description}</p>
           <div className="route-hero__actions">
             <a className="route-hero__btn-primary" href="tel:+917387338634">
               <PhoneIcon /> Call to Book Now
             </a>
-            <a
-              className="route-hero__btn-secondary"
-              href={waBookHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="route-hero__btn-secondary" href={waBookHref} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon /> WhatsApp Us
             </a>
           </div>
         </div>
-        {heroPhotoCredits(route)}
+        {cityImage && <p className="route-hero__photo-credit">{cityImage.credit}</p>}
       </section>
 
       <main className="route-main">
         <div className="route-stack">
           <section className="route-card">
             <div className="route-card__body">
-              <h2>
-                Book {route.origin} To {route.destination} One Way Cab
-              </h2>
+              <h2>Book {service.city} Airport Pickup &amp; Drop</h2>
               <p>
-                Sawari Cabs provides dedicated {route.origin} to {route.destination} cab service for travellers who
-                want a comfortable private ride. Your driver picks you up from your preferred location in{" "}
-                {route.origin} and drops you at your exact destination in {route.destination}.
+                Sawari Cabs provides dedicated airport transfers and local point-to-point rides within{" "}
+                {service.city}. Your driver tracks your flight and picks you up right at arrivals, or takes you to
+                the airport with time to spare.
               </p>
-              <p>
-                Ideal for {route.uses}. Choose the right cab based on your passengers, luggage, and budget.
-              </p>
+              <p>Ideal for {service.uses}. Choose the right cab based on your passengers, luggage, and budget.</p>
               <div className="route-stats">
                 <div className="route-stat">
-                  <strong>{route.distance}</strong>
-                  <span>Distance</span>
+                  <strong>On Time</strong>
+                  <span>Flight tracking</span>
                 </div>
                 <div className="route-stat">
-                  <strong>{route.time}</strong>
-                  <span>Travel time</span>
+                  <strong>Local</strong>
+                  <span>Point-to-point</span>
                 </div>
                 <div className="route-stat">
                   <strong>24/7</strong>
@@ -163,17 +134,16 @@ export default function RoutePage() {
 
           <section className="route-card">
             <div className="route-card__body">
-              <h2>
-                {route.origin} To {route.destination} Route Details
-              </h2>
+              <h2>{service.city} Local &amp; Airport Service Details</h2>
               <p>
-                The journey goes {route.path}, depending on traffic, weather, and your pickup and drop points.
+                Whether you're landing at {service.city} airport, heading out for a flight, or need a local ride
+                across the city, book a private cab with a fixed fare confirmed in advance.
               </p>
               <ul className="route-list">
-                <li>Pickup from {route.origin} — home, hotel, bus stand, railway station, or custom location</li>
-                <li>Drop at {route.drops}</li>
-                <li>One-way, round trip, and custom outstation options available</li>
-                <li>Meal and rest stops can be arranged with the driver</li>
+                <li>Airport pickup with flight tracking — no waiting around</li>
+                <li>Drop at {service.city} airport with buffer time for check-in</li>
+                <li>Local rides to temples, railway station, hotels, or any address in {service.city}</li>
+                <li>Hourly or point-to-point local booking options available</li>
               </ul>
             </div>
           </section>
@@ -194,9 +164,7 @@ export default function RoutePage() {
               <h2>Why Choose Sawari Cabs?</h2>
               <ul className="route-list">
                 <li>Private cab — no sharing, no strangers</li>
-                <li>
-                  Drivers experienced on the {route.origin} to {route.destination} route
-                </li>
+                <li>Drivers experienced with {service.city} airport routes and local roads</li>
                 <li>Clean, well-maintained AC vehicles</li>
                 <li>Transparent fare — no hidden charges</li>
                 <li>Phone and WhatsApp support round the clock</li>
@@ -207,27 +175,21 @@ export default function RoutePage() {
 
           <section className="route-card">
             <div className="route-card__body">
-              <h2>
-                {route.origin} To {route.destination} — FAQs
-              </h2>
+              <h2>{service.city} Airport &amp; Local — FAQs</h2>
               <div className="route-faq">
                 <details>
-                  <summary>
-                    How long does {route.origin} to {route.destination} take by taxi?
-                  </summary>
+                  <summary>Do you track my flight for airport pickup?</summary>
                   <p>
-                    The journey usually takes around {route.time}, depending on traffic, weather, and your final
-                    drop location.
+                    Yes. We track your flight status and adjust the pickup time automatically for delays, so your
+                    driver is always there when you land.
                   </p>
                 </details>
                 <details>
-                  <summary>
-                    Can I book a one-way cab from {route.origin} to {route.destination}?
-                  </summary>
-                  <p>Yes, Sawari Cabs offers both one-way and round-trip cab bookings for this route.</p>
+                  <summary>Can I book a local ride within {service.city} for a few hours?</summary>
+                  <p>Yes, hourly and point-to-point local booking options are available — just call or WhatsApp us.</p>
                 </details>
                 <details>
-                  <summary>Can I choose a Sedan or SUV for this route?</summary>
+                  <summary>Can I choose a Sedan or SUV?</summary>
                   <p>Yes, cab type can be selected based on availability, passenger count, luggage, and comfort preference.</p>
                 </details>
                 <details>
@@ -245,10 +207,10 @@ export default function RoutePage() {
             <p>Share details &amp; call to confirm instantly</p>
           </div>
           <div className="booking-box__body">
-            <label htmlFor="pickup">Pickup City</label>
-            <input id="pickup" defaultValue={route.origin} readOnly />
-            <label htmlFor="drop">Drop City</label>
-            <input id="drop" defaultValue={route.destination} readOnly />
+            <label htmlFor="pickup">Pickup</label>
+            <input id="pickup" defaultValue={`${service.city} Airport`} readOnly />
+            <label htmlFor="drop">Drop</label>
+            <input id="drop" placeholder="Any address in the city" />
             <label htmlFor="cab">Cab Type</label>
             <select id="cab">
               <option>Hatchback — Budget friendly</option>

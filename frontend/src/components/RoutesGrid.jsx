@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, CarIcon } from "./icons";
+import { ArrowRightIcon, CarIcon, PinIcon } from "./icons";
 import { routeOrder, routePages } from "../data/routes";
 
 export default function RoutesGrid() {
@@ -8,7 +8,7 @@ export default function RoutesGrid() {
       <div className="routes__head">
         <span className="routes__kicker">Popular routes</span>
         <h2>Where we go</h2>
-        <p>Nine routes, run every day. Tap yours to see pricing &amp; cab options.</p>
+        <p>Sixteen routes, run every day. Tap yours to see pricing &amp; cab options.</p>
       </div>
       <div className="routes__grid">
         {routeOrder.map((slug) => {
@@ -30,6 +30,16 @@ export default function RoutesGrid() {
             </Link>
           );
         })}
+        <Link to="/kolhapur-airport-local" className="route-card">
+          <span className="route-card__icon">
+            <PinIcon width="20" height="20" />
+          </span>
+          <span className="route-card__body">
+            <span className="route-card__name">Kolhapur Airport — Local</span>
+            <span className="route-card__meta">Airport transfers · Local rides</span>
+          </span>
+          <ArrowRightIcon className="route-card__arrow" width="18" height="18" strokeWidth="2" />
+        </Link>
       </div>
     </section>
   );
