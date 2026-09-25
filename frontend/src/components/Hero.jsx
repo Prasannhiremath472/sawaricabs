@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
 import { destinationImages } from "../data/routes";
 import { ArrowRightIcon, StarIcon, ShieldIcon, ClockIcon } from "./icons";
+import BookingCard from "./BookingCard";
 
 export default function Hero() {
   const bg = destinationImages.Kolhapur;
 
   return (
-    <section className="hero">
+    <section id="book" className="hero">
       <div className="hero__glow" aria-hidden="true" />
+      <div className="hero__form">
+        <BookingCard />
+      </div>
       <div className="hero__content">
         <span className="hero__badge">
           <StarIcon width="14" height="14" strokeWidth="2" />
@@ -23,12 +26,9 @@ export default function Hero() {
           just a driver who shows up on time.
         </p>
         <div className="hero__actions">
-          <a className="hero__cta" href="tel:+917387338634">
-            Call +91-7387338634
+          <a className="hero__cta" href="tel:+919529902335">
+            Call +91 95299 02335
             <ArrowRightIcon width="18" height="18" strokeWidth="2.25" />
-          </a>
-          <a className="hero__cta hero__cta--ghost" href="#book">
-            Get a quote
           </a>
         </div>
         <ul className="hero__points">
@@ -41,6 +41,16 @@ export default function Hero() {
             24/7 availability
           </li>
         </ul>
+        <dl className="hero__stats">
+          <div>
+            <dt>16</dt>
+            <dd>Routes served daily</dd>
+          </div>
+          <div>
+            <dt>10,000+</dt>
+            <dd>Riders and counting</dd>
+          </div>
+        </dl>
       </div>
       <div className="hero__media">
         <img src={bg.src} alt={bg.alt} loading="eager" />

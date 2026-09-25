@@ -59,11 +59,11 @@ export default function Nav() {
           </div>
           <Link to="/blog" onClick={closeMenu}>Blog</Link>
           <Link to="/#contact" onClick={closeMenu}>Contact Us</Link>
-          <a className="route-nav__cta-mobile" href="tel:+917387338634">
+          <a className="route-nav__cta-mobile" href="tel:+919529902335">
             <PhoneIcon /> Call Now
           </a>
         </div>
-        <a className="route-nav__cta" href="tel:+917387338634">
+        <a className="route-nav__cta" href="tel:+919529902335">
           <PhoneIcon /> Call Now
         </a>
       </div>

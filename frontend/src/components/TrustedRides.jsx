@@ -17,8 +17,8 @@ export default function TrustedRides() {
             <li>Regular vehicle inspections</li>
             <li>Flexible refunds</li>
           </ul>
-          <a className="trust__call" href="tel:+917387338634">
-            Call now — +91-7387338634
+          <a className="trust__call" href="tel:+919529902335">
+            Call now — +91 95299 02335
           </a>
         </div>
         <div className="trust__stats">

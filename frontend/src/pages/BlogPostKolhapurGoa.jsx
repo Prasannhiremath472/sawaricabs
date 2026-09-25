@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/blog-post.css";
+import "../styles/nav.css";
 import { PhoneIcon, WhatsAppIcon, ShieldIcon, UsersIcon } from "../components/icons";
+import Nav from "../components/Nav";
 import WhatsAppFab from "../components/WhatsAppFab";
 
 function BackArrowIcon() {
@@ -48,29 +50,7 @@ export default function BlogPostKolhapurGoa() {
 
   return (
     <div className="blog-post-page">
-      <nav className="nav">
-        <div className="nav__inner">
-          <Link className="nav__brand" to="/">
-            <span className="nav__mark">
-              <img src="/logo.png" alt="" width="42" height="42" />
-            </span>
-            Sawari Cabs
-          </Link>
-          <div className="nav__links">
-            <Link to="/">Home</Link>
-            <Link to="/#about">About Us</Link>
-            <Link to="/#routes">All Routes</Link>
-            <Link to="/blog" className="active">
-              Blog
-            </Link>
-            <Link to="/#contact">Contact Us</Link>
-          </div>
-          <a className="nav__cta" href="tel:+917387338634">
-            <PhoneIcon width="14" height="14" />
-            Call Now
-          </a>
-        </div>
-      </nav>
+      <Nav />
 
       <header className="post-hero" style={{ background: "linear-gradient(135deg, #181A2A, #2E4BF2)" }}>
         <div className="post-hero__inner">
@@ -171,12 +151,12 @@ export default function BlogPostKolhapurGoa() {
             <h3>Plan Your Goa Trip Today</h3>
             <p>Call or WhatsApp to confirm your Kolhapur to Goa cab instantly. Clean AC cabs, experienced drivers.</p>
             <div className="post-cta-box__btns">
-              <a href="tel:+917387338634" className="btn-primary">
+              <a href="tel:+919529902335" className="btn-primary">
                 <PhoneIcon width="16" height="16" />
-                Call +91-7387338634
+                Call +91 95299 02335
               </a>
               <a
-                href="https://wa.me/917387338634?text=Hi%2C%20I%20want%20to%20book%20Kolhapur%20to%20Goa%20cab"
+                href="https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20Kolhapur%20to%20Goa%20cab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wa"
@@ -218,7 +198,7 @@ export default function BlogPostKolhapurGoa() {
           <div className="sidebar-card sidebar-card--cta">
             <h4>Book Kolhapur–Goa Cab</h4>
             <p>Instant confirmation. 24/7 support.</p>
-            <a href="tel:+917387338634" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
+            <a href="tel:+919529902335" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
               Call Now
             </a>
           </div>
@@ -239,7 +219,7 @@ export default function BlogPostKolhapurGoa() {
       <footer className="blog-footer">
         <p>
           © 2026 Sawari Cabs. All rights reserved. &nbsp;|&nbsp; <Link to="/">Home</Link> &nbsp;|&nbsp;{" "}
-          <a href="tel:+917387338634">+91-7387338634</a>
+          <a href="tel:+919529902335">+91 95299 02335</a>
         </p>
       </footer>
 

@@ -51,7 +51,7 @@ export default function LocalServicePage() {
     : {};
 
   const waBookText = encodeURIComponent(`${service.city} airport / local`);
-  const waBookHref = `https://wa.me/917387338634?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
+  const waBookHref = `https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function LocalServicePage() {
           <h1>{service.title}</h1>
           <p>{service.description}</p>
           <div className="route-hero__actions">
-            <a className="route-hero__btn-primary" href="tel:+917387338634">
+            <a className="route-hero__btn-primary" href="tel:+919529902335">
               <PhoneIcon /> Call to Book Now
             </a>
             <a className="route-hero__btn-secondary" href={waBookHref} target="_blank" rel="noopener noreferrer">
@@ -224,8 +224,8 @@ export default function LocalServicePage() {
               </svg>
               Fare confirmed before booking — no surprises
             </div>
-            <a className="route-cta" href="tel:+917387338634">
-              <PhoneIcon /> Call +91-7387338634
+            <a className="route-cta" href="tel:+919529902335">
+              <PhoneIcon /> Call +91 95299 02335
             </a>
             <a className="route-cta-wa" href={waBookHref} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon /> WhatsApp to Book

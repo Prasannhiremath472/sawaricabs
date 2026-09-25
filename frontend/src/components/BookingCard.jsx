@@ -78,7 +78,7 @@ export default function BookingCard() {
     "Hi, I want to book a cab" +
     (pickup ? ` from ${pickup}` : "") +
     (drop ? ` to ${drop}` : "");
-  const waHref = `https://wa.me/917387338634?text=${encodeURIComponent(waMessage)}`;
+  const waHref = `https://wa.me/919529902335?text=${encodeURIComponent(waMessage)}`;
 
   return (
     <div className="home-booking-card">
@@ -99,9 +99,9 @@ export default function BookingCard() {
           <ClockAlertIcon width="15" height="15" />
           Fare confirmed before booking — no surprises
         </div>
-        <a className="home-booking-card__btn-call" href="tel:+917387338634">
+        <a className="home-booking-card__btn-call" href="tel:+919529902335">
           <PhoneIcon width="16" height="16" />
-          Call +91-7387338634
+          Call +91 95299 02335
         </a>
         <a className="home-booking-card__btn-wa" href={waHref} target="_blank" rel="noopener noreferrer">
           <WhatsAppIcon width="16" height="16" />
