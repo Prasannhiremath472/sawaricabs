@@ -1,10 +1,7 @@
-import { destinationImages } from "../data/routes";
 import { ArrowRightIcon, StarIcon, ShieldIcon, ClockIcon } from "./icons";
 import BookingCard from "./BookingCard";
 
 export default function Hero() {
-  const bg = destinationImages.Kolhapur;
-
   return (
     <section id="book" className="hero">
       <div className="hero__glow" aria-hidden="true" />
@@ -51,10 +48,6 @@ export default function Hero() {
             <dd>Riders and counting</dd>
           </div>
         </dl>
-      </div>
-      <div className="hero__media">
-        <img src={bg.src} alt={bg.alt} loading="eager" />
-        <span className="hero__credit">{bg.credit}</span>
       </div>
     </section>
   );
