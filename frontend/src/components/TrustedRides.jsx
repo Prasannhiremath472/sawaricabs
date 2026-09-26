@@ -1,9 +1,10 @@
 import { ShieldIcon, StarIcon, ClockIcon } from "./icons";
+import Reveal from "./Reveal";
 
 export default function TrustedRides() {
   return (
     <section className="trust">
-      <div className="trust__card">
+      <Reveal className="trust__card">
         <div className="trust__copy">
           <span className="trust__kicker">Why riders trust us</span>
           <h2>Worry-free travel, every time</h2>
@@ -50,7 +51,7 @@ export default function TrustedRides() {
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

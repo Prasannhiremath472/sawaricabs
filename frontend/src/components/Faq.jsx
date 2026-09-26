@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "./icons";
+import Reveal from "./Reveal";
 
 const FAQS = [
   {
@@ -30,16 +31,16 @@ export default function Faq() {
   return (
     <section className="faq">
       <div className="faq__inner">
-        <div className="faq__head">
+        <Reveal className="faq__head">
           <span className="faq__kicker">Good to know</span>
           <h2>Frequently asked questions</h2>
           <p>Answers to common concerns about safety, refunds and booking changes</p>
-        </div>
+        </Reveal>
         <div className="faq__list">
           {FAQS.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
             return (
-              <div className="faq__item" key={question}>
+              <Reveal as="div" className="faq__item" delay={index * 50} key={question}>
                 <button
                   type="button"
                   className="faq__question"
@@ -54,8 +55,10 @@ export default function Faq() {
                     strokeWidth="2"
                   />
                 </button>
-                {isOpen && <p className="faq__answer">{answer}</p>}
-              </div>
+                <div className={`faq__answer-wrap${isOpen ? " is-open" : ""}`}>
+                  <p className="faq__answer">{answer}</p>
+                </div>
+              </Reveal>
             );
           })}
         </div>

@@ -1,4 +1,5 @@
 import { ShieldIcon, ClockIcon, PinIcon, UsersIcon } from "./icons";
+import Reveal from "./Reveal";
 
 const FEATURES = [
   {
@@ -26,19 +27,19 @@ const FEATURES = [
 export default function WhyChooseUs() {
   return (
     <section id="about" className="why">
-      <div className="why__head">
+      <Reveal className="why__head">
         <span className="why__kicker">Why Sawari Cabs</span>
         <h2>Built for a better ride</h2>
-      </div>
+      </Reveal>
       <div className="why__grid">
-        {FEATURES.map(({ Icon, title, description }) => (
-          <div key={title} className="why__card">
+        {FEATURES.map(({ Icon, title, description }, i) => (
+          <Reveal key={title} className="why__card" delay={i * 70}>
             <span className="why__icon">
               <Icon width="24" height="24" strokeWidth="2" />
             </span>
             <h3>{title}</h3>
             <p>{description}</p>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

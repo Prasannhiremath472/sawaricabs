@@ -4,11 +4,10 @@ import BookingCard from "./BookingCard";
 export default function Hero() {
   return (
     <section id="book" className="hero">
-      <div className="hero__glow" aria-hidden="true" />
-      <div className="hero__form">
+      <div className="hero__form hero-in">
         <BookingCard />
       </div>
-      <div className="hero__content">
+      <div className="hero__content hero-in" style={{ animationDelay: "80ms" }}>
         <span className="hero__badge">
           <StarIcon width="14" height="14" strokeWidth="2" />
           4.8★ rated by 10,000+ riders

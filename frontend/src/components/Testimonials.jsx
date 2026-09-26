@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const STAR_PATH =
   "M12 .587l3.668 7.431L24 9.748l-6 5.847 1.417 8.268L12 19.771 4.583 23.863 6 15.595 0 9.748l8.332-1.73L12 .587z";
 
@@ -58,13 +60,13 @@ function StarRating({ rating }) {
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <div className="testimonials__head">
+      <Reveal className="testimonials__head">
         <span className="testimonials__kicker">Customer love</span>
         <h2>What riders say</h2>
-      </div>
+      </Reveal>
       <div className="testimonials__grid">
-        {TESTIMONIALS.map(({ name, city, text, rating }) => (
-          <div className="testimonials__card" key={name}>
+        {TESTIMONIALS.map(({ name, city, text, rating }, i) => (
+          <Reveal key={name} className="testimonials__card" delay={i * 70}>
             <StarRating rating={rating} />
             <p className="testimonials__text">&ldquo;{text}&rdquo;</p>
             <div className="testimonials__person">
@@ -74,7 +76,7 @@ export default function Testimonials() {
                 <span className="testimonials__city">{city}</span>
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>
