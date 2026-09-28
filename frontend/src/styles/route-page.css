@@ -695,6 +695,20 @@ a {
   height: 30px;
 }
 
+@media (max-width: 480px) {
+  .whatsapp-fab {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-fab svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 @keyframes waPulse {
   0%,  100% { box-shadow: 0 8px 28px -8px rgba(37,211,102,.65), 0 0 0 0 rgba(37,211,102,.4); }
   50%       { box-shadow: 0 8px 28px -8px rgba(37,211,102,.65), 0 0 0 10px rgba(37,211,102,0); }
