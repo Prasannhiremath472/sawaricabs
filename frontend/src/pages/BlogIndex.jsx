@@ -5,6 +5,7 @@ import "../styles/nav.css";
 import { ArrowRightIcon } from "../components/icons";
 import Nav from "../components/Nav";
 import WhatsAppFab from "../components/WhatsAppFab";
+import { destinationImages } from "../data/routes";
 
 function CalendarIcon() {
   return (
@@ -23,12 +24,7 @@ const posts = [
     title: "5 Reasons to Choose Professional Cabs Over Self-Driving",
     excerpt:
       "Discover why booking a professional intercity cab beats driving yourself — from 24/7 availability and safety to zero maintenance worries.",
-    icon: (
-      <svg className="blog-card__thumb-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M5 11l1.2-3.8A3 3 0 0 1 9.05 5h5.9a3 3 0 0 1 2.85 2.2L19 11" stroke="white" strokeWidth="1.5" />
-        <path d="M4 11h16v6H4v-6Z" stroke="white" strokeWidth="1.5" />
-      </svg>
-    ),
+    image: destinationImages.Kolhapur,
   },
   {
     slug: "kolhapur-to-goa-road-trip",
@@ -37,12 +33,7 @@ const posts = [
     title: "Weekend Escapes: Planning Your Kolhapur to Goa Road Trip",
     excerpt:
       "From Kolhapur's historic streets to Goa's sunny shores — why hiring a professional cab makes your weekend escape stress-free and affordable.",
-    icon: (
-      <svg className="blog-card__thumb-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" strokeWidth="1.5" />
-        <circle cx="12" cy="9" r="2.5" stroke="white" strokeWidth="1.5" />
-      </svg>
-    ),
+    image: destinationImages.Goa,
   },
   {
     slug: "pune-to-mumbai-business-travel",
@@ -51,12 +42,7 @@ const posts = [
     title: "The Ultimate Business Traveler's Guide: Pune to Mumbai",
     excerpt:
       "For professionals on the Pune-Mumbai corridor — how a private cab keeps you punctual, productive, and door-to-door stress-free every time.",
-    icon: (
-      <svg className="blog-card__thumb-icon" viewBox="0 0 24 24" fill="none">
-        <rect x="2" y="7" width="20" height="14" rx="2" stroke="white" strokeWidth="1.5" />
-        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="white" strokeWidth="1.5" />
-      </svg>
-    ),
+    image: destinationImages.Mumbai,
   },
 ];
 
@@ -99,7 +85,7 @@ export default function BlogIndex() {
           {posts.map((post) => (
             <Link className="blog-card" to={`/blog/${post.slug}`} key={post.slug}>
               <div className="blog-card__thumb">
-                {post.icon}
+                <img src={post.image.src} alt={post.image.alt} loading="lazy" />
                 <span className="blog-card__cat">{post.category}</span>
                 <span className="blog-card__read">{post.readTime}</span>
               </div>
@@ -127,7 +113,7 @@ export default function BlogIndex() {
       <footer className="blog-footer">
         <p>
           © 2026 Sawari Cabs. All rights reserved. &nbsp;|&nbsp; <Link to="/">Home</Link> &nbsp;|&nbsp;{" "}
-          <a href="tel:+919529902335">+91 95299 02335</a>
+          <a href="tel:+917249322335">+91 72493 22335</a>
         </p>
       </footer>
 

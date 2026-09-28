@@ -148,12 +148,12 @@ export default function BlogPostPuneMumbai() {
             <h3>Book Your Pune–Mumbai Cab</h3>
             <p>Reliable, on-time, door-to-door. Call or WhatsApp for instant confirmation.</p>
             <div className="post-cta-box__btns">
-              <a href="tel:+919529902335" className="btn-primary">
+              <a href="tel:+917249322335" className="btn-primary">
                 <PhoneIcon width="16" height="16" />
-                Call +91 95299 02335
+                Call +91 72493 22335
               </a>
               <a
-                href="https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20Pune%20to%20Mumbai%20cab"
+                href="https://wa.me/917249322335?text=Hi%2C%20I%20want%20to%20book%20Pune%20to%20Mumbai%20cab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wa"
@@ -195,7 +195,7 @@ export default function BlogPostPuneMumbai() {
           <div className="sidebar-card sidebar-card--cta">
             <h4>Book Pune–Mumbai Cab</h4>
             <p>On-time pickup. Door-to-door drop.</p>
-            <a href="tel:+919529902335" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
+            <a href="tel:+917249322335" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
               Call Now
             </a>
           </div>
@@ -216,7 +216,7 @@ export default function BlogPostPuneMumbai() {
       <footer className="blog-footer">
         <p>
           © 2026 Sawari Cabs. All rights reserved. &nbsp;|&nbsp; <Link to="/">Home</Link> &nbsp;|&nbsp;{" "}
-          <a href="tel:+919529902335">+91 95299 02335</a>
+          <a href="tel:+917249322335">+91 72493 22335</a>
         </p>
       </footer>
 

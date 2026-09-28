@@ -122,12 +122,12 @@ export default function BlogPost5Reasons() {
             <h3>Ready to Book Your Cab?</h3>
             <p>Call or WhatsApp us now for instant confirmation. Clean AC cabs, experienced drivers, 24/7 support.</p>
             <div className="post-cta-box__btns">
-              <a href="tel:+919529902335" className="btn-primary">
+              <a href="tel:+917249322335" className="btn-primary">
                 <PhoneIcon width="16" height="16" />
-                Call +91 95299 02335
+                Call +91 72493 22335
               </a>
               <a
-                href="https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20a%20cab"
+                href="https://wa.me/917249322335?text=Hi%2C%20I%20want%20to%20book%20a%20cab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wa"
@@ -172,7 +172,7 @@ export default function BlogPost5Reasons() {
           <div className="sidebar-card sidebar-card--cta">
             <h4>Book a Cab Now</h4>
             <p>24/7 availability. Call or WhatsApp to confirm instantly.</p>
-            <a href="tel:+919529902335" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
+            <a href="tel:+917249322335" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "12px" }}>
               Call Now
             </a>
           </div>
@@ -193,7 +193,7 @@ export default function BlogPost5Reasons() {
       <footer className="blog-footer">
         <p>
           © 2026 Sawari Cabs. All rights reserved. &nbsp;|&nbsp; <Link to="/">Home</Link> &nbsp;|&nbsp;{" "}
-          <a href="tel:+919529902335">+91 95299 02335</a>
+          <a href="tel:+917249322335">+91 72493 22335</a>
         </p>
       </footer>
 

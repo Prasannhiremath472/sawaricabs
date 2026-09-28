@@ -22,8 +22,8 @@ export default function Hero() {
           just a driver who shows up on time.
         </p>
         <div className="hero__actions">
-          <a className="hero__cta" href="tel:+919529902335">
-            Call +91 95299 02335
+          <a className="hero__cta" href="tel:+917249322335">
+            Call +91 72493 22335
             <ArrowRightIcon width="18" height="18" strokeWidth="2.25" />
           </a>
         </div>

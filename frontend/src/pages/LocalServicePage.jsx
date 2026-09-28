@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "../styles/nav.css";
 import "../styles/route-page.css";
 import { cabOptions, destinationImages, localServices } from "../data/routes";
+import { applySeo } from "../utils/seo";
 import { PhoneIcon, WhatsAppIcon, StarIcon, ClockIcon, UsersIcon, ShieldIcon, PinIcon } from "../components/icons";
 import Nav from "../components/Nav";
 import WhatsAppFab from "../components/WhatsAppFab";
@@ -33,14 +34,13 @@ export default function LocalServicePage() {
   const cityImage = destinationImages[service.city];
 
   useEffect(() => {
-    document.title = `${service.title} | Sawari Cabs`;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        `Book ${service.title} with Sawari Cabs. Airport pickup, drop, and local rides within ${service.city}. Clean AC cabs, 24/7 support.`
-      );
-    }
+    applySeo({
+      title: service.seoTitle || `${service.title} | Sawari Cabs`,
+      description:
+        service.seoDescription ||
+        `Book ${service.title} with Sawari Cabs. Airport pickup, drop, and local rides within ${service.city}. Clean AC cabs, 24/7 support.`,
+      keywords: service.seoKeywords,
+    });
   }, [service]);
 
   const heroStyle = cityImage
@@ -51,7 +51,7 @@ export default function LocalServicePage() {
     : {};
 
   const waBookText = encodeURIComponent(`${service.city} airport / local`);
-  const waBookHref = `https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
+  const waBookHref = `https://wa.me/917249322335?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function LocalServicePage() {
           <h1>{service.title}</h1>
           <p>{service.description}</p>
           <div className="route-hero__actions">
-            <a className="route-hero__btn-primary" href="tel:+919529902335">
+            <a className="route-hero__btn-primary" href="tel:+917249322335">
               <PhoneIcon /> Call to Book Now
             </a>
             <a className="route-hero__btn-secondary" href={waBookHref} target="_blank" rel="noopener noreferrer">
@@ -224,8 +224,8 @@ export default function LocalServicePage() {
               </svg>
               Fare confirmed before booking — no surprises
             </div>
-            <a className="route-cta" href="tel:+919529902335">
-              <PhoneIcon /> Call +91 95299 02335
+            <a className="route-cta" href="tel:+917249322335">
+              <PhoneIcon /> Call +91 72493 22335
             </a>
             <a className="route-cta-wa" href={waBookHref} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon /> WhatsApp to Book

@@ -9,6 +9,7 @@ import {
   cabServiceTitle,
   heroImages,
 } from "../data/routes";
+import { applySeo } from "../utils/seo";
 import { PhoneIcon, WhatsAppIcon, StarIcon, ClockIcon, UsersIcon, ShieldIcon, PinIcon } from "../components/icons";
 import Nav from "../components/Nav";
 import WhatsAppFab from "../components/WhatsAppFab";
@@ -51,15 +52,14 @@ export default function RoutePage() {
   const titleLong = cabServiceTitle(route);
 
   useEffect(() => {
-    document.title = `${title} | Sawari Cabs`;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        `Book ${title} with Sawari Cabs. Clean AC cabs, professional drivers, one-way and round-trip options, and 24/7 support.`
-      );
-    }
-  }, [title]);
+    applySeo({
+      title: route.seoTitle || `${title} | Sawari Cabs`,
+      description:
+        route.seoDescription ||
+        `Book ${title} with Sawari Cabs. Clean AC cabs, professional drivers, one-way and round-trip options, and 24/7 support.`,
+      keywords: route.seoKeywords,
+    });
+  }, [route, title]);
 
   const { leftImage, rightImage } = heroImages(route);
   const heroStyle = {
@@ -68,7 +68,7 @@ export default function RoutePage() {
   };
 
   const waBookText = encodeURIComponent(`${route.origin} to ${route.destination}`);
-  const waBookHref = `https://wa.me/919529902335?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
+  const waBookHref = `https://wa.me/917249322335?text=Hi%2C%20I%20want%20to%20book%20${waBookText}%20cab`;
 
   return (
     <>
@@ -113,7 +113,7 @@ export default function RoutePage() {
             drivers, 24/7 support.
           </p>
           <div className="route-hero__actions">
-            <a className="route-hero__btn-primary" href="tel:+919529902335">
+            <a className="route-hero__btn-primary" href="tel:+917249322335">
               <PhoneIcon /> Call to Book Now
             </a>
             <a
@@ -246,9 +246,9 @@ export default function RoutePage() {
           </div>
           <div className="booking-box__body">
             <label htmlFor="pickup">Pickup City</label>
-            <input id="pickup" defaultValue={route.origin} readOnly />
+            <input id="pickup" value={route.origin} readOnly />
             <label htmlFor="drop">Drop City</label>
-            <input id="drop" defaultValue={route.destination} readOnly />
+            <input id="drop" value={route.destination} readOnly />
             <label htmlFor="cab">Cab Type</label>
             <select id="cab">
               <option>Hatchback — Budget friendly</option>
@@ -262,8 +262,8 @@ export default function RoutePage() {
               </svg>
               Fare confirmed before booking — no surprises
             </div>
-            <a className="route-cta" href="tel:+919529902335">
-              <PhoneIcon /> Call +91 95299 02335
+            <a className="route-cta" href="tel:+917249322335">
+              <PhoneIcon /> Call +91 72493 22335
             </a>
             <a className="route-cta-wa" href={waBookHref} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon /> WhatsApp to Book

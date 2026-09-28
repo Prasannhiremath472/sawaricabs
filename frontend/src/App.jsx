@@ -6,10 +6,12 @@ import BlogIndex from "./pages/BlogIndex";
 import BlogPost5Reasons from "./pages/BlogPost5Reasons";
 import BlogPostKolhapurGoa from "./pages/BlogPostKolhapurGoa";
 import BlogPostPuneMumbai from "./pages/BlogPostPuneMumbai";
+import ScrollToHash from "./components/ScrollToHash";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogIndex />} />
